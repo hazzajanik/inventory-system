@@ -1,9 +1,17 @@
 import useProduct from "../../../hooks/useProduct";
 
-const ProductManage = () => {
+const SalesHistory = () => {
     const [product] = useProduct();
+
+    const totalPrice = product.reduce((total,item)=> total + item.sellingPrice,0)
+    const totalInvest = Number(product.reduce((total,item)=> total + item.productcost,0))
+
+
+    const totalProfit = totalPrice - totalInvest;
+
     return (
         <div>
+
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -12,11 +20,11 @@ const ProductManage = () => {
                             <th>
                                 #
                             </th>
-                            <th>image</th>
-                            <th>Name</th>
-                            <th>Quantity</th>
-                            <th>Sales Count</th>
-                            <th>Action</th>
+                            <th>Product Name</th>
+                            <th>Selling Date</th>
+                            <th>Profit</th>
+                            
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -28,19 +36,19 @@ const ProductManage = () => {
                                 <td>
                                     <div className="flex items-center gap-3">
                                         <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src={item.productimage} />
+                                            <div className=" w-12 h-12">
+                                            {item.productname}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <span className="badge badge-ghost">{item.productname}</span>
+                                    <span className="badge badge-ghost">11/11/2024</span>
                                 </td>
-                                <td><span className="badge badge-ghost">{item.productquantity}</span></td>
-                                <td>200</td>
+                                <td><span className="badge badge-ghost">{totalProfit.toFixed(2)}</span></td>
+                                
                                 <th>
-                                    
+
 
                                 </th>
                             </tr>)
@@ -53,4 +61,4 @@ const ProductManage = () => {
     );
 };
 
-export default ProductManage;
+export default SalesHistory;

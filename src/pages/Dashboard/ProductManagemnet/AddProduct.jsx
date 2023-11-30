@@ -23,7 +23,9 @@ const AddProduct = () => {
         const productimage = form.productimage.value;
         const productquantity = form.productquantity.value;
         const productlocation = form.productlocation.value;
-        const productcost = form.productcost.value;
+        const productPrice = form.productcost.value;
+        const productcost = Number(productPrice);
+        console.log(productcost)
         const profitmargin = form.profitmargin.value;
         const discount = form.discount.value;
         const productdescription = form.productdescription.value;

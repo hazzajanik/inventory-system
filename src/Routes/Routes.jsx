@@ -15,6 +15,10 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import Error from "../components/Error/Error";
 import ProductManage from "../pages/Dashboard/ProductManage/ProductManage";
 import ManageShop from "../pages/Dashboard/AdminDashboard/ManageShop";
+import PrivateRoute from "./PrivateRoute";
+import SalesCount from "../pages/Dashboard/ProductManagemnet/SalesCount";
+import SalesHistory from "../pages/Dashboard/ProductManagemnet/SalesHistory";
+import SaleDetails from "../pages/Dashboard/AdminDashboard/SaleDetails";
 
 
 export const router = createBrowserRouter([
@@ -37,7 +41,7 @@ export const router = createBrowserRouter([
         },
         {
             path: '/createstore',
-            element: <CreateStore></CreateStore>
+            element: <PrivateRoute><CreateStore></CreateStore></PrivateRoute>
         },
         
 
@@ -76,7 +80,21 @@ export const router = createBrowserRouter([
         {
           path : 'dashboard/manageShop',
           element: <ManageShop></ManageShop>
+        },
+        {
+          path: 'dashboard/salesCount',
+          element:<SalesCount></SalesCount>
+        },
+        {
+          path: 'dashboard/saleshistory',
+          element: <SalesHistory></SalesHistory>
+          
+        },
+        {
+          path: 'dashboard/salesdetails',
+          element: <SaleDetails></SaleDetails>
         }
+
         
       ]
     },
