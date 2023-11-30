@@ -8,7 +8,7 @@ import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const {admin,manager} = useAdmin();
+    const { admin, manager } = useAdmin();
     console.log(admin)
 
 
@@ -73,15 +73,10 @@ const Navbar = () => {
                 </li>
         }
 
-
-        <li><NavLink
-            to="/allbooks"
-            className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold" : ""
-            }
-        >
-            Watch Demo
-        </NavLink></li>
+       
+        <li>
+            <a href="https://www.youtube.com/watch?v=qfkRt7z5QV4">Watch Demo</a>
+        </li>
 
         <li><NavLink
             to="/register"
