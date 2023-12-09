@@ -1,9 +1,10 @@
 # React + Vite
+About Project : -
+Gain valuable insights into your inventory trends, sales performance, and overall business health through comprehensive reporting and analytics tools. Make data-driven decisions to optimize your inventory strategy.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Feature :-
+ Real-time Inventory Tracking,Product Information Management,Barcode Scanning,Order Management,Supplier Relationship Management,Reporting and Analytics and User Permissions and Security.
 
-Currently, two official plugins are available:
+ Project Link : https://resplendent-flan-dadd77.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # b8a12-client-side-hazzajanik
